@@ -132,7 +132,7 @@ const Url = require('../models/Url');
 const utils = require('../utils/utils');
 require('dotenv').config({ path: '../config/.env' });
 ```
-使用 HTTP POST 請求來產生資料並存到資料庫。
+使用 HTTP POST 請求來產生資料 (origUrl, expireAt) 並存到資料庫。
 ```js
 // 將原始 URL 建立一個短 URL 並存儲在資料庫中
 router.post('/v1/urls', async (req, res) => {
@@ -171,7 +171,7 @@ router.post('/v1/urls', async (req, res) => {
 module.exports = router;
 ```
 
-接著使用 HTTP GET 回應原始 URL。
+接著使用 HTTP GET 回應原始 URL 並測試是否超過過期時間。
 ```js
 router.get('/:urlId', async (req, res) => {
   try {
