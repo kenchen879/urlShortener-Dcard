@@ -30,7 +30,7 @@
 [Postman](https://www.postman.com/) 測試 API
 
 ```http
-  POST /api/
+  POST /api/urls
 ```
 | Field | Type   | Description        |
 | :-    | :-     | :-                 |
