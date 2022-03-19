@@ -201,7 +201,7 @@ router.get('/:urlId', async (req, res) => {
 [Postman](https://www.postman.com/) 測試 API
 
 ```http
-  POST /api/short
+  POST /api/v1/urls
 ```
 | Field | Type   | Description        |
 | :-    | :-     | :-                 |
